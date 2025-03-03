@@ -1,0 +1,382 @@
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1d1f20; /* Dark background for contrast */
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main app container */
+.app {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Dashboard styling */
+.dashboard {
+  width: 100%;
+  max-width: 1200px; /* Max width for better layout on larger screens */
+  padding: 20px;
+  margin-top: 50px;
+  background-color: #2a2d32; /* Dark background for the dashboard */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Header */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f5a623; /* Accent color */
+  text-transform: uppercase;
+}
+
+/* Button Styling */
+button:hover {
+  background-color: #f5a623;
+  transform: scale(1.05); /* Small hover animation for better feedback */
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Table Styling */
+.call-log-table {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+  background-color: #333; /* Darker background for the table */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.call-log-table th,
+.call-log-table td {
+  padding: 16px;
+}
+
+.call-log-table th {
+  background-color: #444; /* Dark gray for headers */
+  color: #f5a623; /* Accent color for headers */
+  font-weight: 600;
+}
+
+.call-log-table td {
+  background-color: #222; /* Darker rows for contrast */
+  color: #bbb; /* Light text color */
+  border-bottom: 1px solid #444;
+}
+
+.call-log-table tr {
+  transition: background-color 0.3s ease;
+}
+
+.call-log-table tr:hover {
+  background-color: white;
+}
+
+.call-log-table tr:not(:hover) {
+  background-color: #222;
+}
+
+
+.call-log-table tr:nth-child(even) {
+  background-color: #292c30; /* Alternate row background for better readability */
+}
+
+/* Call Form Container */
+.call-form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 1000;
+  width: 400px; /* Adjust the width of the form */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Styling */
+.call-form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.call-form label {
+  font-size: 1.1rem;
+  color: #f5a623;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.call-form input,
+.call-form select {
+  padding: 12px;
+  /* margin-bottom: 15px; */
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  width: 200px;
+}
+
+.call-form select {
+  cursor: pointer;
+}
+
+.call-form-button-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.call-form button {
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.call-form button:hover {
+  background-color: #0056b3;
+}
+
+.call-form button[type="button"] {
+  background-color: #dc3545;
+}
+
+.call-form button[type="button"]:hover {
+  background-color: #c82333;
+}
+
+.call-form-container .close-btn {
+  margin-top: 10px;
+  color: #dc3545;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.call-form-container .close-btn:hover {
+  color: #ff6b6b;
+}
+
+
+/* Button Focus styles */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+/* General Table Cell Styling */
+td, th {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .call-form-container {
+    width: 90%;
+  }
+
+  .call-log-table {
+    font-size: 0.9rem;
+  }
+
+  .call-form input,
+  .call-form select {
+    font-size: 0.9rem;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.page-item {
+  list-style-type: none;
+  margin: 0 5px;
+}
+
+.page-link {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: #0056b3;
+}
+
+.active .page-link {
+  background-color: #28a745;
+}
+
+.disabled .page-link {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.call-button {
+  background: white;
+  padding: 12px 24px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+
+.call-button-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* MenuBar Styling */
+.menu-bar {
+  background-color: #2a2d32; /* Same dark background as the dashboard */
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  margin: 0 15px;
+}
+
+.menu-item a {
+  color: #f5a623; /* Accent color for menu items */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.menu-item a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Responsive styling for MenuBar */
+@media (max-width: 768px) {
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item {
+    margin: 10px 0;
+  }
+
+  .menu-item a {
+    font-size: 1rem;
+  }
+}
+
+/* Play button styling */
+.play-button {
+  background: none; /* Blue button */
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.play-button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Modal.css */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure modal is on top */
+}
+
+/* Full-screen blur overlay */
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(223, 223, 223, 0.5); /* Optional: Adds a dark overlay */
+  backdrop-filter: blur(5px); /* The blur effect */
+  z-index: -1; /* Place the blur effect behind the modal */
+}

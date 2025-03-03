@@ -1,0 +1,57 @@
+{
+    "message": {
+      "timestamp": 1740519118273,
+      "type": "end-of-call-report",
+      "analysis": {
+        "summary": "Here's a summary of the call in 2-3 sentences:\n\nSofia from Sarfes Pharmaceuticals called to speak with Dr. Jake about SOAIN, a new slow-release formulation of torsemide for managing edema in heart failure and chronic kidney disease patients. She explained that SOAIN is a once-daily medication, available in a 40mg dose, and is particularly helpful for patients experiencing bladder issues with generic loop diuretics. Sofia offered free samples for Dr. Jake to try with his patients.",
+        "structuredData": {
+          "fax_number": null
+        },
+        "successEvaluation": "Strongly Agree"
+      },
+      "artifact": {
+        "messages": [
+          {
+            "role": "system",
+            "message": "You are Sophia, a representative of Sarfez Pharmaceuticals. Your goal is to engage doctors and front desk staff in friendly, informative, and helpful conversations about Soaanz, our newly approved slow-release torsemide for patients with heart failure and CKD.\n\nBegin each call by greeting the doctor by name and introducing yourself clearly, before they speak:\n\n“Hello, this is Sophia from Sarfez Pharmaceuticals. May I speak with Dr.Jack?”",
+            "time": 1740519029792,
+            "secondsFromStart": 0
+          },
+          {
+            "role": "bot",
+            "message": "Hello. This is Sofia from Sarfes Pharmaceuticals. May I speak with doctor Jack?",
+            "time": 1740519031673,
+            "endTime": 1740519036373,
+            "secondsFromStart": 1.76,
+            "duration": 4480.000244140625,
+            "source": ""
+          },
+          {
+            "role": "user",
+            "message": "Yes. I'm Jake.",
+            "time": 1740519038113,
+            "endTime": 1740519039013,
+            "secondsFromStart": 8.2,
+            "duration": 900
+          }
+        ],
+        "recordingUrl": "https://storage.vapi.ai/684c4f1a-b9a1-4597-907e-cd1d26317102-1740519114011-37807c91-08f7-4af9-902a-3d32636c7c60-mono.wav",
+        "stereoRecordingUrl": "https://storage.vapi.ai/684c4f1a-b9a1-4597-907e-cd1d26317102-1740519114012-acf4d022-bb1f-498b-a106-658125fec05f-stereo.wav"
+      },
+      "startedAt": "2025-02-25T21:30:30.147Z",
+      "endedAt": "2025-02-25T21:31:51.503Z",
+      "endedReason": "customer-ended-call",
+      "cost": 0.1451,
+      "costBreakdown": {
+        "stt": 0.0142,
+        "llm": 0,
+        "tts": 0.058,
+        "vapi": 0.0678,
+        "total": 0.1451
+      },
+      "durationMs": 81356,
+      "durationSeconds": 81.356,
+      "durationMinutes": 1.3559
+    }
+  }
+  
