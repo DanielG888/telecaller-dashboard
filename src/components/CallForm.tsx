@@ -24,7 +24,6 @@ const CallForm: React.FC<CallFormProps> = ({ onClose}) => {
 
     socketRef.current.onmessage = (event) => {
       const message = JSON.parse(event.data);
-      console.log(message);
       if (message.status === "ringing") {
         setCallStatus("Calling...");
       } else if (message.status === "answered" || message.status === "in-progress") {
